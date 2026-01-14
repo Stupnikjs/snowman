@@ -109,7 +109,7 @@ contract Snow is ERC20, Ownable {
         (bool collected,) = payable(s_collector).call{value: address(this).balance}("");
         require(collected, "Fee collection failed!!!");
     }
-
+    // onlycollector change collector 
     function changeCollector(address _newCollector) external onlyCollector {
         if (_newCollector == address(0)) {
             revert S__ZeroAddress();
