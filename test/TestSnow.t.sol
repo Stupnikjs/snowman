@@ -20,7 +20,11 @@ contract TestSnow is Test {
 
     function setUp() public {
         deployer = new DeploySnow();
+
+        // RETURNS SNOW INSTANCE 
         snow = deployer.run();
+
+        // GETTERS BY INHERITANCE TO GET WETH ADDRESS 
         weth = deployer.weth();
         collector = deployer.collector();
         FEE = deployer.FEE();

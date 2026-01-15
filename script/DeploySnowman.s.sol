@@ -16,6 +16,7 @@ contract DeploySnowman is Script {
         return snowman;
     }
 
+    // to pass in the Snowman NFT 
     function svgToImageURI(string memory svg) public pure returns (string memory) {
         string memory baseURL = "data:image/svg+xml;base64,";
         string memory svgBase64Encoded = Base64.encode(bytes(string(abi.encodePacked(svg))));

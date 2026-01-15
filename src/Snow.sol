@@ -106,9 +106,11 @@ contract Snow is ERC20, Ownable {
         uint256 collection = i_weth.balanceOf(address(this));
         i_weth.transfer(s_collector, collection);
 
+        // reentry via reveive() ? 
         (bool collected,) = payable(s_collector).call{value: address(this).balance}("");
         require(collected, "Fee collection failed!!!");
     }
+    
     // onlycollector change collector 
     function changeCollector(address _newCollector) external onlyCollector {
         if (_newCollector == address(0)) {

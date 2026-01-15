@@ -33,6 +33,7 @@ contract Snowman is ERC721, Ownable {
     }
 
     // >>> EXTERNAL FUNCTIONS
+    // EVERY ONE CAN CALL THIS 
     function mintSnowman(address receiver, uint256 amount) external {
         for (uint256 i = 0; i < amount; i++) {
             _safeMint(receiver, s_TokenCounter);
