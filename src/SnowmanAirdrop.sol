@@ -121,6 +121,14 @@ contract SnowmanAirdrop is EIP712, ReentrancyGuard {
         );
     }
 
+
+
+
+
+
+
+
+
     // >>> GETTER FUNCTIONS
     function getMerkleRoot() external view returns (bytes32) {
         return i_merkleRoot;

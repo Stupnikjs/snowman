@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity ^0.8.24;
 
+// Tutorial 
+// https://updraft.cyfrin.io/courses/advanced-foundry/merkle-airdrop/project-setup
+
 import {Script, console2} from "forge-std/Script.sol";
 import {stdJson} from "forge-std/StdJson.sol";
 import {Merkle} from "murky/src/Merkle.sol";
